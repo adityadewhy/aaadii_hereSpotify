@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: linear-gradient(
+		to right,
+		#ad6654,
+		#a1a87e,
+		#f2dcd1
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+#card {
+	background-image: linear-gradient(
+		174.2deg,
+		rgba(255, 244, 228, 1) 7.1%,
+		rgba(240, 246, 238, 1) 67.4%
+	);
+
+	height: 500px;
+	width: 400px;
+	margin: 10px;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#banner {
+	margin-bottom: 2.2rem;
+}
+
+#banner img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 100%;
+}
+
+#socials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttons {
+	background-image: linear-gradient(
+		to right,
+		#085078 0%,
+		#85d8ce 51%,
+		#085078 100%
+	);
+	transition: 0.5s;
+	background-size: 200% auto;
+
+	border-radius: 10px;
+	height: 55px;
+	width: 150px;
+	margin-bottom: 12px;
+
+	display: flex;
+	align-items: center;
+}
+
+.email {
+	width: 300px;
+}
+
+.buttons a {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.buttons img {
+	width: 32px;
+	height: 32px;
+}
+
+a p {
+	font-family: "Poppins", sans-serif;
+	color: aliceblue;
+}
+
+.buttons:hover {
+	background-position: right center; /* change the direction of the change here */
+	/* color: #fff; */
+	text-decoration: none;
+}
+
+@media (width <= 550px) {
+	#card {
+		margin-top: 100px;
+	}
+	footer {
+		width: 100vw;
+		margin-top: 100px;
+
+		position: relative;
+		overflow: hidden;
+	}
+
+	footer img {
+		width: 100%;
+	}
+
+	footer p {
+		background-color: rgba(233, 179, 233, 0.615);
+		border-radius: 10px;
+		font-family: "Poppins", sans-serif;
+		color: aliceblue;
+		margin: 10px;
+		padding: 9px;
+		transition: 0.3s;
+
+		z-index: 10;
+		position: absolute;
+
+		bottom: -100%;
+	}
+
+	footer:hover p {
+		bottom: 0;
+	}
+}
+
+@media (width > 550px) {
+	footer {
+		position: absolute;
+		width: 526px;
+		height: 295px;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+	}
+
+	footer p {
+		position: absolute;
+		z-index: 10;
+		bottom: -100%;
+		background-color: rgba(233, 179, 233, 0.615);
+		border-top-right-radius: 10px;
+		font-family: "Poppins", sans-serif;
+		color: aliceblue;
+		padding-left: 9px;
+		transition: 0.3s;
+	}
+
+	footer:hover p {
+		bottom: 0;
+	}
+}
